@@ -3,7 +3,9 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 
 
-mongoose.connect("mongodb://localhost:27017/user");
+mongoose.connect("mongodb+srv://akeelakhtar71:yeBKEKB8sJdSp8gK@akeelakhtar71.mongodb.net/");
+// mongoose.connect("mongodb://localhost:27017/user");
+
 const app = express();
 const PORT = 4000;
 
