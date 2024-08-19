@@ -22,10 +22,11 @@ app.use(cors());
 app.get("/get", (req, res) => {
   datamodal.find().then((resu) => {
     res.json(resu);
-  }).catch((err) => {
-    console.log(err);
-    res.status(500).send("Internal server Error");
-  });
+  })
+  // .catch((err) => {
+  //   console.log(err);
+  //   res.status(500).send("Internal server Error");
+  // });
 });
 
 app.post("/voice", (req, res) => {
