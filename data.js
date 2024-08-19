@@ -7,7 +7,7 @@ mongoose.connect("mongodb+srv://akeelakhtar71:yeBKEKB8sJdSp8gK@cluster0.047ye.mo
 // mongoose.connect("mongodb://localhost:27017/user");
 
 const app = express();
-// const PORT = 4000;
+const PORT = 4000;
 
 const userSchema = new mongoose.Schema({
   name: { type: String, required: true, unique: true },
