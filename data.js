@@ -2,8 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/user");
 
+mongoose.connect("mongodb://localhost:27017/user");
 const app = express();
 const PORT = 4000;
 
@@ -22,7 +22,7 @@ app.get("/get", (req, res) => {
     res.json(resu);
   }).catch((err) => {
     console.log(err);
-    res.status(500).send("Internal Error");
+    res.status(500).send("Internal server Error");
   });
 });
 
