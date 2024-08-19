@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/user");
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 const userSchema = new mongoose.Schema({
   name: { type: String, required: true, unique: true },
