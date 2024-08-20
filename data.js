@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const morgan = require("morgan");
 require("dotenv").config();  // Ensure dotenv is configured
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/user");
+mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost:27017/user");
 
 const dbConnect = require("./config/db");
 
