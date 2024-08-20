@@ -5,3 +5,5 @@ const dbConnect = async () => {
     .catch(() => console.log('connection to db failed'))
 };
 module.exports = dbConnect;
+
+//mongodb+srv://akeelakhtar71:akeel123@cluster0.047ye.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
