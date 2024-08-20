@@ -1,11 +1,16 @@
+require("dotenv").config({path:"./config/config.env"});
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const morgan = require("morgan");
 require("dotenv").config();  // Ensure dotenv is configured
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/user");
 
+const dbConnect = require("./config/db");
+
 const app = express();
+app.use(morgan("tiny"));
 const PORT = process.env.PORT || 4000;
 
 const userSchema = new mongoose.Schema({
@@ -40,8 +45,13 @@ app.post("/voice", (req, res) => {
 });
 
 const start = async () => {
-  app.listen(PORT, () => {
-    console.log(`App is running on port ${PORT}`);
+  app.listen(PORT, async() => {
+    try {
+      await dbConnect();
+      console.log('server on http://localhost:${PORT}')
+    } catch (err) {
+      console.log(err)
+    }
   });
 };
 
