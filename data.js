@@ -1,12 +1,9 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-require("dotenv").config();
+require("dotenv").config();  // Ensure dotenv is configured
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/user", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/user");
 
 const app = express();
 const PORT = process.env.PORT || 4000;
