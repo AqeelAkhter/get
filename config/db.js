@@ -1,14 +1,14 @@
 
 
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 
-const dbConnect = async () => {
-  return mongoose.connect(process.env.MONGODB_URL)
-    .then(() => console.log('Connection to DB established...'))
-    .catch((err) => console.log('Connection to DB failed:', err));
-};
+// const dbConnect = async () => {
+//   return mongoose.connect(process.env.MONGODB_URL)
+//     .then(() => console.log('Connection to DB established...'))
+//     .catch((err) => console.log('Connection to DB failed:', err));
+// };
 
-module.exports = dbConnect;
+// module.exports = dbConnect;
 
 // const mongoose = require("mongoose");
 // const dbConnect = async () => {
