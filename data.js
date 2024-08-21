@@ -23,6 +23,7 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true },
 });
 
+// This model will use the "data" collection in the "user" database
 const DataModel = mongoose.model("data", userSchema);
 
 app.get("/get", (req, res) => {
