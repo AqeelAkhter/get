@@ -123,8 +123,8 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 
 
-mongoose.connect("mongodb+srv://akeelakhtar71:akeel123@cluster0.047ye.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
-// mongoose.connect("mongodb://localhost:27017/user");
+//mongoose.connect("mongodb+srv://akeelakhtar71:akeel123@cluster0.047ye.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+mongoose.connect("mongodb://localhost:27017/user");
 
 const app = express();
 const PORT = process.env.PORT || 4000;
